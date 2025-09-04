@@ -1,22 +1,43 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>내 첫 A/B 테스트 페이지</title>
+  <meta charset="utf-8" />
+  <title>A/B Test – Button Design</title>
+
   <!-- Keak tracking code -->
-  <script id="keak-script" 
+  <script id="keak-script"
           src="https://keak-prod-d7a7awfeabbvb6hq.z01.azurefd.net/scripts/63cb78e0-b1bf-4a0b-bf83-89d1a1db1b3a-5650.js"
           type="text/javascript"
           data-cookie="5650"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body { font-family: sans-serif; padding: 40px; text-align: center; }
-    a.button { display:inline-block; margin-top:20px; padding:10px 20px;
-               border:1px solid #000; text-decoration:none; }
-  </style>
-</head>
-<body>
-  <h1>안녕하세요! 👋</h1>
-  <p>이건 Keak A/B 테스트용 샘플 페이지입니다.</p>
-  <a class="button" href="thankyou.html">전환 버튼</a>
-</body>
-</html>
+    :root { --bg:#0c0f14; --text:#eaeef3; --muted:#a5b1c2; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 48px 20px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg); color: var(--text); display: grid; place-items: center;
+    }
+    main { max-width: 720px; width: 100%; text-align: center; }
+    h1 { font-weight: 800; letter-spacing: .2px; margin: 0 0 12px; }
+    p { color: var(--muted); margin: 0 0 28px; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    /* Button A – solid, rounded */
+    #btnA {
+      padding: 14px 20px; border: 0; border-radius: 14px;
+      background: #4f7cff; color: white; font-weight: 700; font-size: 16px;
+      cursor: pointer; transition: transform .08s ease, filter .2s ease;
+    }
+    #btnA:hover { filter: brightness(1.05); }
+    #btnA:active { transform: translateY(1px); }
+
+    /* Button B – outline, pill, different font weight/letter spacing */
+    #btnB {
+      padding: 14px 20px; border-radius: 999px;
+      border: 2px solid #c2c8d1; background: transparent; color: #cfd6df;
+      font-weight: 600; letter-spacing: .4px; font-size: 16px;
+      cursor: pointer; transition: background .2s ease, color .2s ease, transform .08s ease;
+    }
+    #btnB:hover { background: #c2c8d1; color: #0c0f14;

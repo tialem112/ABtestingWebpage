@@ -1,62 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <title>A/B Test – Button Design</title>
-
-  <!-- Keak tracking code -->
+  <title>내 랜딩페이지</title>
+  <!-- Keak tracking code (테스트 페이지에도, 전환 페이지에도 동일하게 삽입) -->
   <script id="keak-script"
           src="https://keak-prod-d7a7awfeabbvb6hq.z01.azurefd.net/scripts/63cb78e0-b1bf-4a0b-bf83-89d1a1db1b3a-5650.js"
           type="text/javascript"
           data-cookie="5650"></script>
-
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    :root { --bg:#0c0f14; --text:#eaeef3; --muted:#a5b1c2; }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0; padding: 48px 20px;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg); color: var(--text); display: grid; place-items: center;
-    }
-    main { max-width: 720px; width: 100%; text-align: center; }
-    h1 { font-weight: 800; letter-spacing: .2px; margin: 0 0 12px; }
-    p { color: var(--muted); margin: 0 0 28px; }
-    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-    /* Button A – solid, rounded */
-    #btnA {
-      padding: 14px 20px; border: 0; border-radius: 14px;
-      background: #4f7cff; color: white; font-weight: 700; font-size: 16px;
-      cursor: pointer; transition: transform .08s ease, filter .2s ease;
-    }
-    #btnA:hover { filter: brightness(1.05); }
-    #btnA:active { transform: translateY(1px); }
-
-    /* Button B – outline, pill */
-    #btnB {
-      padding: 14px 20px; border-radius: 999px;
-      border: 2px solid #c2c8d1; background: transparent; color: #cfd6df;
-      font-weight: 600; letter-spacing: .4px; font-size: 16px;
-      cursor: pointer; transition: background .2s ease, color .2s ease, transform .08s ease;
-    }
-    #btnB:hover { background: #c2c8d1; color: #0c0f14; }
-    #btnB:active { transform: translateY(1px); }
-
-    small { display:block; margin-top:18px; color: var(--muted); }
+    body {font-family: system-ui, sans-serif; padding: 32px; max-width: 720px; margin: auto;}
+    .btn {display:inline-block; padding:12px 18px; border:1px solid #222; text-decoration:none}
   </style>
 </head>
 <body>
-  <main>
-    <h1>Which button looks more appealing?</h1>
-    <p>Click one of the buttons below. We’re testing visual preference only.</p>
-
-    <div class="grid">
-      <button id="btnA" aria-label="Button A – Solid Blue">Choose Option A</button>
-      <button id="btnB" aria-label="Button B – Outline Pill">Choose Option B</button>
-    </div>
-
-    <small>Tip: In Keak, set click goals for <code>#btnA</code> and <code>#btnB</code> to compare.</small>
-  </main>
+  <h1>환영합니다</h1>
+  <p>이건 Keak A/B 테스트용 간단 랜딩페이지입니다.</p>
+  <a class="btn" href="./thankyou.html">전환 버튼(예: 신청하기)</a>
 </body>
 </html>

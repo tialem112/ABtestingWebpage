@@ -33,11 +33,30 @@
     #btnA:hover { filter: brightness(1.05); }
     #btnA:active { transform: translateY(1px); }
 
-    /* Button B – outline, pill, different font weight/letter spacing */
+    /* Button B – outline, pill */
     #btnB {
       padding: 14px 20px; border-radius: 999px;
       border: 2px solid #c2c8d1; background: transparent; color: #cfd6df;
       font-weight: 600; letter-spacing: .4px; font-size: 16px;
       cursor: pointer; transition: background .2s ease, color .2s ease, transform .08s ease;
     }
-    #btnB:hover { background: #c2c8d1; color: #0c0f14;
+    #btnB:hover { background: #c2c8d1; color: #0c0f14; }
+    #btnB:active { transform: translateY(1px); }
+
+    small { display:block; margin-top:18px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Which button looks more appealing?</h1>
+    <p>Click one of the buttons below. We’re testing visual preference only.</p>
+
+    <div class="grid">
+      <button id="btnA" aria-label="Button A – Solid Blue">Choose Option A</button>
+      <button id="btnB" aria-label="Button B – Outline Pill">Choose Option B</button>
+    </div>
+
+    <small>Tip: In Keak, set click goals for <code>#btnA</code> and <code>#btnB</code> to compare.</small>
+  </main>
+</body>
+</html>

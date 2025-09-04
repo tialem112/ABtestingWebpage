@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <title>내 랜딩페이지</title>
+  <title>Web Page</title>
   <!-- Keak tracking code (테스트 페이지에도, 전환 페이지에도 동일하게 삽입) -->
   <script id="keak-script"
           src="https://keak-prod-d7a7awfeabbvb6hq.z01.azurefd.net/scripts/63cb78e0-b1bf-4a0b-bf83-89d1a1db1b3a-5650.js"
@@ -10,13 +10,47 @@
           data-cookie="5650"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {font-family: system-ui, sans-serif; padding: 32px; max-width: 720px; margin: auto;}
-    .btn {display:inline-block; padding:12px 18px; border:1px solid #222; text-decoration:none}
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 32px;
+      max-width: 720px;
+      margin: auto;
+      text-align: center;
+    }
+    .btn {
+      display:inline-block;
+      padding:12px 18px;
+      border-radius: 6px;
+      text-decoration:none;
+      margin: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    /* 버튼 A 스타일 */
+    #btnA {
+      background-color: #4f7cff; /* 파란색 */
+      color: #ffffff;
+      border: none;
+      font-family: Arial, sans-serif;
+    }
+    #btnA:hover { filter: brightness(1.1); }
+
+    /* 버튼 B 스타일 */
+    #btnB {
+      background-color: #f5f5f5; /* 밝은 회색 */
+      color: #333333;
+      border: 2px solid #333333;
+      font-family: "Courier New", monospace; /* 다른 폰트 */
+    }
+    #btnB:hover { background-color: #dddddd; }
   </style>
 </head>
 <body>
-  <h1>환영합니다</h1>
-  <p>이건 Keak A/B 테스트용 간단 랜딩페이지입니다.</p>
-  <a class="btn" href="./thankyou.html">전환 버튼(예: 신청하기)</a>
+  <h1>Welcome!</h1>
+  <p>This is a test page for AI AB testing.</p>
+
+  <!-- 버튼 2개 -->
+  <a id="btnA" class="btn" href="./thankyou.html">Button A</a>
+  <a id="btnB" class="btn" href="./thankyou.html">Button B</a>
 </body>
 </html>
